@@ -1,6 +1,17 @@
-// pages/blog/integrating-notion-cms.tsx
-import BlogLayout from '../../components/BlogLayout'
+// components/IntergratingNotionCMS.tsx
 import { format } from 'date-fns'
+
+function BlogLayout({ title, date, children }: { title: string, date: string, children: React.ReactNode }) {
+  return (
+    <div className="container mx-auto px-4 py-12">
+      <h1 className="text-4xl font-bold mb-4">{title}</h1>
+      <p className="text-sm text-gray-500 mb-8">Published on {date}</p>
+      <div className="prose max-w-none">
+        {children}
+      </div>
+    </div>
+  )
+}
 
 export default function IntegratingNotionCMS() {
   const date = format(new Date('2024-08-30'), 'MMMM d, yyyy')
