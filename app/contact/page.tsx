@@ -10,6 +10,16 @@ export default function Contact() {
   const { register, handleSubmit, formState: { errors } } = useForm()
   const [visitors, setVisitors] = useState(0)
   const [visitorTimer, setVisitorTimer] = useState(0)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  const images = [
+    '/images/image6.jpg',
+    '/images/image7.jpg',
+    '/images/image8.jpg',
+    '/images/image9.jpg',
+    '/images/image10.jpg',
+ 
+  ]
 
   const onSubmit = async (data) => {
     console.log(data)
@@ -34,6 +44,14 @@ export default function Contact() {
     }
   }, [visitorTimer])
 
+  useEffect(() => {
+    const imageChangeInterval = setInterval(() => {
+      setCurrentImageIndex(prevIndex => (prevIndex + 1) % images.length)
+    }, 5000) // Change image every 5 seconds
+
+    return () => clearInterval(imageChangeInterval)
+  }, [images.length])
+
   return (
     <div
       className="container mx-auto px-4 py-12 relative bg-cover bg-center"
@@ -50,7 +68,7 @@ export default function Contact() {
       <div className="relative z-10">
         <h1 className="text-4xl font-bold mb-8 text-white text-center">Contact Me</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Contact Form with a background image */}
+          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -109,14 +127,14 @@ export default function Contact() {
             </form>
           </motion.div>
 
-          {/* Contact Information & Visitor Counter with a background image */}
+          {/* Contact Information & Visitor Counter */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="relative bg-white bg-cover bg-center p-8 rounded-lg shadow-lg"
+            className="relative bg-white p-8 rounded-lg shadow-lg"
             style={{
-                backgroundImage: 'url(/images/image3.jpg)',
+                backgroundImage: `url(${images[currentImageIndex]})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}
