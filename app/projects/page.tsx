@@ -6,15 +6,53 @@ import Image from 'next/image'
 import Fuse from 'fuse.js'
 import Lightbox from 'yet-another-react-lightbox'
 import 'yet-another-react-lightbox/styles.css'
+import Link from 'next/link'
 
 const projects = [
-  { id: 1, title: 'Movie Listing Platform', image: '/images/movie.jpg', description: 'A platform for listing movies of any genre.' },
-  { id: 2, title: 'Animation Movie Platform', image: '/images/animation.jpg', description: 'A dedicated platform for animation movies.' },
-  { id: 3, title: 'EcoConnect Informational Website', image: '/images/ecoconnect3.jpg', description: 'An informational website about the EcoConnect waste management solution.' },
-  { id: 4, title: 'EcoConnect E-commerce Website', image: '/images/ecoconnect1.jpg', description: 'An e-commerce platform connecting waste recyclers and waste collectors.' },
-  { id: 5, title: 'Personal Portfolio', image: '/images/portfolio.jpg', description: 'A simple portfolio project created during school.' },
-  { id: 6, title: 'Jewela Touring Company Website', image: '/images/touring.jpg', description: 'A website for a touring company named Jewela.' },
-  { id: 7, title: 'Gerar Talents School Website', image: '/images/school.jpg', description: 'A website for Gerar Talents School.' },
+  { 
+    id: 1,
+    title: 'Movie Listing Platform', 
+    image: '/images/movie.jpg', 
+    description: 'A platform for listing movies of any genre.', 
+    slug: 'movie-lists'
+  },
+  { 
+    id: 2,
+    title: 'Animation Movie Platform', 
+    image: '/images/animation.jpg', 
+    description: 'A dedicated platform for animation movies.',
+    slug: 'animation-lists'
+  },
+  { 
+    id: 3,
+    title: 'EcoConnect Informational Website', 
+    image: '/images/ecoconnect3.jpg', 
+    description: 'An informational website about the EcoConnect waste management solution.' 
+  },
+  { 
+    id: 4,
+    title: 'EcoConnect E-commerce Website', 
+    image: '/images/ecoconnect1.jpg', 
+    description: 'An e-commerce platform connecting waste recyclers and waste collectors.' 
+  },
+  { 
+    id: 5,
+    title: 'Personal Portfolio', 
+    image: '/images/portfolio.jpg', 
+    description: 'A simple portfolio project created during school.' 
+  },
+  { 
+    id: 6,
+    title: 'Jewela Touring Company Website', 
+    image: '/images/touring.jpg', 
+    description: 'A website for a touring company named Jewela.' 
+  },
+  { 
+    id: 7,
+    title: 'Mela International School Website', 
+    image: '/images/school.jpg', 
+    description: 'A website for Mela international School.' 
+  },
 ]
 
 const fuse = new Fuse(projects, {
@@ -59,14 +97,17 @@ export default function Projects() {
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 20 }}
+  
+               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-transform duration-300"
             >
               {/* Project Image */}
+              <Link href={`/projects/${project.slug}`} >
               <Image
-                src={project.image}
+                src={project.
+                  image}
                 alt={project.title}
                 width={300}
                 height={300}
@@ -80,9 +121,11 @@ export default function Projects() {
                 </h2>
                 {/* Project Description */}
                 <p className="text-gray-600 leading-relaxed">
-                  {project.description}
+                  {project.
+                  description}
                 </p>
               </div>
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -92,7 +135,8 @@ export default function Projects() {
           open={lightboxIndex >= 0}
           index={lightboxIndex}
           close={() => setLightboxIndex(-1)}
-          slides={projects.map(project => ({ src: project.image }))}
+          slides={projects.map(project => ({ src: project.
+            image }))}
         />
       </div>
     </div>
