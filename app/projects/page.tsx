@@ -8,9 +8,13 @@ import Lightbox from 'yet-another-react-lightbox'
 import 'yet-another-react-lightbox/styles.css'
 
 const projects = [
-  { id: 1, title: 'E-commerce Platform', image: '/placeholder.svg?height=300&width=300', description: 'A full-stack e-commerce solution built with Next.js and Stripe.' },
-  { id: 2, title: 'Social Media Dashboard', image: '/placeholder.svg?height=300&width=300', description: 'A responsive dashboard for social media analytics using React and D3.js.' },
-  { id: 3, title: 'AI-powered Chatbot', image: '/placeholder.svg?height=300&width=300', description: 'An intelligent chatbot built with Python and integrated with GPT-3.' },
+  { id: 1, title: 'Movie Listing Platform', image: '/images/movie.jpg', description: 'A platform for listing movies of any genre.' },
+  { id: 2, title: 'Animation Movie Platform', image: '/images/animation.jpg', description: 'A dedicated platform for animation movies.' },
+  { id: 3, title: 'EcoConnect Informational Website', image: '/images/ecoconnect3.jpg', description: 'An informational website about the EcoConnect waste management solution.' },
+  { id: 4, title: 'EcoConnect E-commerce Website', image: '/images/ecoconnect1.jpg', description: 'An e-commerce platform connecting waste recyclers and waste collectors.' },
+  { id: 5, title: 'Personal Portfolio', image: '/images/portfolio.jpg', description: 'A simple portfolio project created during school.' },
+  { id: 6, title: 'Jewela Touring Company Website', image: '/images/touring.jpg', description: 'A website for a touring company named Jewela.' },
+  { id: 7, title: 'Gerar Talents School Website', image: '/images/school.jpg', description: 'A website for Gerar Talents School.' },
 ]
 
 const fuse = new Fuse(projects, {
