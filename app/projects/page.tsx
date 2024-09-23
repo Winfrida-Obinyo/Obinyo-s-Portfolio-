@@ -27,31 +27,36 @@ const projects = [
     id: 3,
     title: 'EcoConnect Informational Website', 
     image: '/images/ecoconnect3.jpg', 
-    description: 'An informational website about the EcoConnect waste management solution.' 
+    description: 'An informational website about the EcoConnect waste management solution.',
+    slug: 'ecoconnectInformational-lists' 
   },
   { 
     id: 4,
     title: 'EcoConnect E-commerce Website', 
     image: '/images/ecoconnect1.jpg', 
-    description: 'An e-commerce platform connecting waste recyclers and waste collectors.' 
+    description: 'An e-commerce platform connecting waste recyclers and waste collectors.',
+    slug: 'ecoconnectECommerce-lists'
   },
   { 
     id: 5,
     title: 'Personal Portfolio', 
     image: '/images/portfolio.jpg', 
-    description: 'A simple portfolio project created during school.' 
+    description: 'A simple portfolio project created during school.',
+    slug: 'portfolio-lists' 
   },
   { 
     id: 6,
     title: 'Jewela Touring Company Website', 
     image: '/images/touring.jpg', 
-    description: 'A website for a touring company named Jewela.' 
+    description: 'A website for a touring company named Jewela.',
+    slug: 'jewela-lists' 
   },
   { 
     id: 7,
     title: 'Mela International School Website', 
     image: '/images/school.jpg', 
-    description: 'A website for Mela international School.' 
+    description: 'A website for Mela international School.',
+    slug: 'gerar-lists' 
   },
 ]
 
