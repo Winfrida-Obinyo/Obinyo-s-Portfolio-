@@ -1,4 +1,4 @@
-require('dotenv').config();
+'use server'
 
 import { z } from 'zod'
 import { Resend } from 'resend'
@@ -25,7 +25,7 @@ export async function sendEmail (data: ContactFormInputs) {
     const { data, error } = await resend.emails.send({
       from: 'onboarding@resend.dev',
       to: 'obinyowinfridaa@gmail.com',
-      cc: ['ebesteinpr@gmail.com'],
+      cc: 'ebesteinpr@gmail.com',
       subject: 'Contact form submission',
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
       react: ContactFormEmail({ name, email, message })
