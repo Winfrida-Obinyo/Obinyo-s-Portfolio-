@@ -13,7 +13,6 @@ export default function Newsletter() {
   const onSubmit = async (data) => {
     setLoading(true)
 
-    // Call Mailchimp API to subscribe the user
     const res = await fetch('/api/subscribe', {
       method: 'POST',
       headers: {
@@ -34,7 +33,7 @@ export default function Newsletter() {
         position: 'top-right',
         autoClose: 3000,
       })
-      reset() // Clear the form
+      reset() 
     }
     setLoading(false)
   }
@@ -72,7 +71,6 @@ export default function Newsletter() {
             {loading ? 'Subscribing...' : 'Subscribe'}
           </button>
 
-          {/* Privacy policy notice */}
           <p className="mt-4 text-sm text-gray-600 text-center">
             By submitting this form. I agree to the <Link href="/privacyPolicy" className="text-[#748A46] underline">privacy policy</Link>.
           </p>

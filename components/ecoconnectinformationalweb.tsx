@@ -5,12 +5,10 @@ import { faGithub, faInternetExplorer } from '@fortawesome/free-brands-svg-icons
 function ProjectLayout({ title, imageUrl, children }: { title: string, imageUrl?: string, children: React.ReactNode }) {
   return (
     <div className="container mx-auto px-4 py-12">
-      {/* Center the header and add deeper green color */}
       <h1 className="text-4xl font-bold mb-4 text-center" style={{ color: '#6A9A2B' }}>
         {title}
       </h1>
 
-      {/* Display Image below the header if available */}
       {imageUrl && (
         <div className="mb-6">
           <img
@@ -29,7 +27,6 @@ function ProjectLayout({ title, imageUrl, children }: { title: string, imageUrl?
 export default function EcoConnectInformationalPlatform() {
   return (
     <ProjectLayout title="EcoConnect Informational Platform" imageUrl="/images/ecoconnect3.jpg">
-      {/* Detailed paragraphs */}
       <p className="text-lg leading-relaxed mb-4">➜ EcoConnect serves as an informational hub for waste management solutions, offering a wide range of articles, resources, and guides on effective waste management practices. The platform empowers individuals and organizations to adopt sustainable waste management strategies.</p>
 
       <p className="text-lg leading-relaxed mb-4">➜ The website is designed to be user-friendly, ensuring that visitors can easily navigate through various sections, such as recycling tips, upcycling ideas, and waste reduction methods. The content is continuously updated with the latest industry trends and practices, helping users stay informed.</p>
@@ -38,7 +35,6 @@ export default function EcoConnectInformationalPlatform() {
 
       <p className="text-lg leading-relaxed mb-4">➜ In addition to static content, the platform includes interactive tools like a waste calculator, helping users estimate their waste footprint. Users can also sign up for newsletters and updates, ensuring they are informed about new developments in the world of waste management.</p>
 
-      {/* Centered links with icons */}
       <ul className="list-none text-center space-y-4 text-lg">
         <li>
           <a href="https://github.com/yourusername/ecoconnect" target="_blank" className="underline flex justify-center items-center space-x-2" style={{ color: '#6A9A2B' }}>

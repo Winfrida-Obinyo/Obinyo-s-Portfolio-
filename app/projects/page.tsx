@@ -75,19 +75,16 @@ export default function Projects() {
 
   return (
     <div
-      className="relative bg-cover bg-center bg-no-repeat"
+      className="relative bg-cover bg-center bg-no-repeat min-h-screen"
       style={{
-        backgroundImage: 'url(/images/images5.jpg)', // Replace with your background image path
+        backgroundImage: 'url(/images/images5.jpg)', 
       }}
     >
-      {/* Optional Overlay */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
-      {/* Main Content */}
       <div className="relative container mx-auto px-4 py-12">
-        <h1 className="text-5xl font-bold mb-12 text-center text-white z-10">My Projects</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center text-white z-10">My Projects</h1>
         
-        {/* Search Bar */}
         <div className="flex justify-center mb-10 z-10">
           <input
             type="text"
@@ -97,51 +94,42 @@ export default function Projects() {
           />
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 relative z-10">
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
-  
-               initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-transform duration-300"
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-transform duration-300 flex flex-col"
             >
-              {/* Project Image */}
               <Link href={`/projects/${project.slug}`} >
-              <Image
-                src={project.
-                  image}
-                alt={project.title}
-                width={300}
-                height={300}
-                className="w-full h-48 object-cover cursor-pointer"
-                onClick={() => setLightboxIndex(index)}
-              />
-              <div className="p-6">
-                {/* Project Title */}
-                <h2 className="text-2xl font-semibold mb-3 text-gray-800 hover:text-blue-600 transition-colors">
-                  {project.title}
-                </h2>
-                {/* Project Description */}
-                <p className="text-gray-600 leading-relaxed">
-                  {project.
-                  description}
-                </p>
-              </div>
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={300}
+                  height={200}
+                  className="w-full h-48 object-cover cursor-pointer"
+                  onClick={() => setLightboxIndex(index)}
+                />
+                <div className="p-4 flex-grow"> 
+                  <h2 className="text-lg md:text-xl font-semibold mb-2 text-gray-800 hover:text-blue-600 transition-colors">
+                    {project.title}
+                  </h2>
+                  <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                    {project.description}
+                  </p>
+                </div>
               </Link>
             </motion.div>
           ))}
         </div>
 
-        {/* Lightbox for Image Preview */}
         <Lightbox
           open={lightboxIndex >= 0}
           index={lightboxIndex}
           close={() => setLightboxIndex(-1)}
-          slides={projects.map(project => ({ src: project.
-            image }))}
+          slides={projects.map(project => ({ src: project.image }))}
         />
       </div>
     </div>

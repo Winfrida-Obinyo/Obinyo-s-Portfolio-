@@ -1,12 +1,9 @@
 'use client'
-// app/blog/[slug]/page.tsx
 import dynamic from 'next/dynamic'
 import { useParams } from 'next/navigation';
 
-// Define the types of the blog post slugs
 type BlogPostSlug = 'learning-nextjs-portfolio' | 'understanding-ssr-nextjs' | 'integrating-notion-cms'; 
 
-// Create the BlogPostComponents mapping
 const BlogPostComponents: Record<BlogPostSlug, React.ComponentType<{}>> = {
   'learning-nextjs-portfolio': dynamic(() => import('./../../../components/learningnext.jsportfolio')),
   'understanding-ssr-nextjs': dynamic(() => import('./../../../components/serversideRendering')),
@@ -14,13 +11,12 @@ const BlogPostComponents: Record<BlogPostSlug, React.ComponentType<{}>> = {
 }
 
 export default function BlogPostPage() {
-    const { slug } = useParams<{ slug: string }>(); // Use useParams to get the slug
+    const { slug } = useParams<{ slug: string }>(); 
   
-    // Determine the component based on the slug
     const BlogPostComponent = slug && BlogPostComponents[slug as BlogPostSlug];
   
     if (!BlogPostComponent) {
-      return <p>Loading...</p>; // Optionally handle the case where the slug is invalid
+      return <p>Loading...</p>; 
     }
   
     return <BlogPostComponent />;

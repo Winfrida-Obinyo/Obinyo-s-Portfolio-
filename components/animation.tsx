@@ -5,12 +5,10 @@ import { faGithub, faInternetExplorer } from '@fortawesome/free-brands-svg-icons
 function ProjectLayout({ title, imageUrl, children }: { title: string, imageUrl?: string, children: React.ReactNode }) {
   return (
     <div className="container mx-auto px-4 py-12">
-      {/* Center the header and add deeper green color */}
       <h1 className="text-4xl font-bold mb-4 text-center" style={{ color: '#6A9A2B' }}>
         {title}
       </h1>
 
-      {/* Display Image below the header if available */}
       {imageUrl && (
         <div className="mb-6">
           <img
@@ -29,7 +27,6 @@ function ProjectLayout({ title, imageUrl, children }: { title: string, imageUrl?
 export default function AnimationMovies() {
   return (
     <ProjectLayout title="Animation Movies Platform" imageUrl="/images/animation.jpg">
-      {/* Detailed paragraphs */}
       <p className="text-lg leading-relaxed mb-4">➜ This platform is dedicated to showcasing animated films, providing a comprehensive and ever-growing database of animated movies from around the world. Whether you're a fan of classic animations or the latest releases, this platform caters to all tastes in animation.</p>
 
       <p className="text-lg leading-relaxed mb-4">➜ The platform includes a robust search functionality that allows users to find movies based on title, genre, release year, or even animation studio. You can filter results by ratings, date, or alphabetically to narrow down your choices. This helps users quickly discover films they are interested in.</p>
@@ -42,7 +39,6 @@ export default function AnimationMovies() {
 
       <p className="text-lg leading-relaxed mb-4">➜ For deployment, the platform is hosted on Netlify for seamless, fast, and scalable web hosting. The codebase is open-source and available on GitHub, inviting developers to contribute to the project or fork it for their own purposes. Feel free to check out the live version or browse the code on GitHub:</p>
 
-      {/* Centered links with icons */}
       <ul className="list-none text-center space-y-4 text-lg">
         <li>
           <a href="Winfrida-Obinyonimation-movies" target="_blank" className="underline flex justify-center items-center space-x-2" style={{ color: '#6A9A2B' }}>

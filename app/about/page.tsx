@@ -35,12 +35,9 @@ export default function About() {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      {/* Optional overlay to ensure text is readable */}
       <div className="absolute inset-0 bg-black opacity-30"></div>
 
-      {/* Content */}
       <div className="relative z-10">
-        {/* Header */}
         <motion.h1 
           className="text-5xl font-extrabold mb-8 text-center text-gradient bg-gradient-to-r from-blue-900 to-[#BAD59E] text-transparent bg-clip-text"
           initial={{ opacity: 0, y: -20 }}
@@ -50,7 +47,6 @@ export default function About() {
           About Me
         </motion.h1>
 
-        {/* Introduction Paragraph */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -62,7 +58,6 @@ export default function About() {
           </p>
         </motion.div>
 
-        {/* Skills Section with Image on the Right */}
         <div className="mb-12 flex flex-col md:flex-row md:space-x-8">
           <div className="md:w-2/3">
             <h2 className="text-3xl font-semibold mb-6 text-[#BAD59E]">Technical Skills</h2>
@@ -81,12 +76,11 @@ export default function About() {
             </ul>
           </div>
 
-          {/* Placeholder Image with Larger Size and Rounded Shape */}
           <div className="md:w-1/3 flex justify-center items-center">
             <motion.img
-              src="/images/image3.jpg" // Replace with your actual image path
+              src="/images/image3.jpg" 
               alt="Placeholder"
-              className="w-80 h-80 object-cover rounded-full shadow-lg" // Increased size
+              className="w-80 h-80 object-cover rounded-full shadow-lg" 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.3 }}
@@ -94,7 +88,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Skill Proficiency Bars */}
         <div className="mb-12">
           <h2 className="text-3xl font-semibold mb-4 text-[#BAD59E]">Skill Proficiency</h2>
           <div className="space-y-4">

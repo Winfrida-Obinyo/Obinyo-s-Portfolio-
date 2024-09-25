@@ -5,12 +5,10 @@ import { faGithub, faInternetExplorer } from '@fortawesome/free-brands-svg-icons
 function ProjectLayout({ title, imageUrl, children }: { title: string, imageUrl?: string, children: React.ReactNode }) {
   return (
     <div className="container mx-auto px-4 py-12">
-      {/* Center the header and add deeper color */}
       <h1 className="text-4xl font-bold mb-4 text-center" style={{ color: '#6A9A2B' }}>
         {title}
       </h1>
 
-      {/* Display Image below the header if available */}
       {imageUrl && (
         <div className="mb-6">
           <img
@@ -30,7 +28,6 @@ export default function MovieListingPlatform() {
   return (
     <ProjectLayout title="Movie Listing Platform" imageUrl="/images/movie.jpg">
       <div className="border border-gray-300 rounded-lg p-4 mb-6">
-        {/* Paragraphs without green color */}
         <p className="text-lg leading-relaxed mb-4">➜ This platform allows users to browse and list movies across various genres, offering a comprehensive database of films ranging from classic hits to the latest releases.</p>
 
         <p className="text-lg leading-relaxed mb-4">➜ Users can easily search and filter movies by genre, release date, and ratings. Whether they are looking for the top-rated movies or exploring a specific genre like action, drama, or comedy, the platform ensures a user-friendly and intuitive experience. Additionally, the platform provides detailed information on each movie, including cast, director, and user reviews, giving users a deeper insight into the films.</p>
@@ -41,7 +38,6 @@ export default function MovieListingPlatform() {
 
         <p className="text-lg leading-relaxed mb-4">➜ As for the deployment, the platform is hosted on Netlify, and the codebase is publicly available on GitHub. Feel free to explore the source code or check out the live version:</p>
 
-        {/* Centered links with icons and deeper color */}
         <ul className="list-none text-center space-y-4 text-lg">
           <li>
             <a href="https://github.com/yourusername/movielistingplatform" target="_blank" className="underline flex justify-center items-center space-x-2" style={{ color: '#6A9A2B' }}>

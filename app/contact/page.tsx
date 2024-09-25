@@ -12,16 +12,21 @@ export default function ContactPage() {
       }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
-      <div className="relative z-10 justify-between">
-        <h1 className="text-4xl font-bold mb-8 text-white text-center md:text-left">
+      <div className="relative z-10 flex flex-col items-center">
+        <h1
+          className="text-4xl font-bold mb-8 text-center"
+          style={{
+            color: '#B2FFB2', 
+          }}
+        >
           Contact Me
         </h1>
         <div className="container">
           <div className="flex flex-col md:flex-row gap-4 md:gap-8">
-            <div className="md:w-1/2 md:h-full">
+            <div className="flex flex-wrap">
               <ContactForm />
             </div>
-            <div className="md:w-1/2 md:h-full">
+            <div className="">
               <ContactSlider />
             </div>
           </div>

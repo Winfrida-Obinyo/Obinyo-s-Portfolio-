@@ -5,12 +5,10 @@ import { faGithub, faInternetExplorer } from '@fortawesome/free-brands-svg-icons
 function ProjectLayout({ title, imageUrl, children }: { title: string, imageUrl?: string, children: React.ReactNode }) {
   return (
     <div className="container mx-auto px-4 py-12">
-      {/* Center the header and add deeper green color */}
       <h1 className="text-4xl font-bold mb-4 text-center" style={{ color: '#6A9A2B' }}>
         {title}
       </h1>
 
-      {/* Display Image below the header if available */}
       {imageUrl && (
         <div className="mb-6">
           <img
@@ -29,7 +27,6 @@ function ProjectLayout({ title, imageUrl, children }: { title: string, imageUrl?
 export default function EcoconnectPlatform() {
   return (
     <ProjectLayout title="EcoConnect E-Commerce Platform" imageUrl="/images/ecoconnect1.jpg">
-      {/* Detailed paragraphs */}
       <p className="text-lg leading-relaxed mb-4">➜ This e-commerce platform connects waste recyclers with waste collectors, creating a seamless marketplace where recycling services are easily accessible. By fostering this connection, the platform promotes sustainable waste management solutions.</p>
 
       <p className="text-lg leading-relaxed mb-4">➜ The platform allows users to register as recyclers or waste collectors. Recyclers can post job offers, while collectors can bid on these jobs, providing flexibility and opportunities for all participants. Users can securely manage their transactions and communicate through the platform.</p>
@@ -40,7 +37,6 @@ export default function EcoconnectPlatform() {
 
       <p className="text-lg leading-relaxed mb-4">➜ The platform is hosted on Netlify, ensuring high availability and scalability. Feel free to explore the source code or check out the live demo of the platform through the links below:</p>
 
-      {/* Centered links with icons */}
       <ul className="list-none text-center space-y-4 text-lg">
         <li>
           <a href="https://github.com/yourusername/ecoconnectecommerce" target="_blank" className="underline flex justify-center items-center space-x-2" style={{ color: '#6A9A2B' }}>

@@ -1,4 +1,3 @@
-// components/IntegratingNotionCMS.tsx
 import { format } from 'date-fns'
 
 function BlogLayout({ title, date, children }: { title: string, date: string, children: React.ReactNode }) {

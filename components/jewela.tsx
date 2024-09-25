@@ -5,12 +5,10 @@ import { faGithub, faInternetExplorer } from '@fortawesome/free-brands-svg-icons
 function ProjectLayout({ title, imageUrl, children }: { title: string, imageUrl?: string, children: React.ReactNode }) {
   return (
     <div className="container mx-auto px-4 py-12">
-      {/* Center the header and add deeper green color */}
       <h1 className="text-4xl font-bold mb-4 text-center" style={{ color: '#6A9A2B' }}>
         {title}
       </h1>
 
-      {/* Display Image below the header if available */}
       {imageUrl && (
         <div className="mb-6">
           <img
@@ -29,7 +27,6 @@ function ProjectLayout({ title, imageUrl, children }: { title: string, imageUrl?
 export default function Jewela() {
   return (
     <ProjectLayout title="Jewela Touring Company Platform" imageUrl="/images/touring.jpg">
-      {/* Detailed paragraphs */}
       <p className="text-lg leading-relaxed mb-4">➜ The website for Jewela Touring Company provides comprehensive information on tours, packages, and bookings. It aims to offer travelers a seamless way to plan their adventures.</p>
 
       <p className="text-lg leading-relaxed mb-4">➜ Users can view itineraries, explore various travel packages, and make reservations online. The site features an intuitive interface that helps users easily navigate through different options.</p>
@@ -38,7 +35,6 @@ export default function Jewela() {
 
       <p className="text-lg leading-relaxed mb-4">➜ This project showcases my ability to create functional and engaging web applications using modern web technologies.</p>
 
-      {/* Centered links with icons */}
       <ul className="list-none text-center space-y-4 text-lg">
         <li>
           <a href="https://github.com/yourusername/jewelatouringcompany" target="_blank" className="underline flex justify-center items-center space-x-2" style={{ color: '#6A9A2B' }}>

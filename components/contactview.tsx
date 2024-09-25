@@ -33,22 +33,27 @@ export default function ContactSlider() {
     useEffect(() => {
         const imageChangeInterval = setInterval(() => {
             setCurrentImageIndex(prevIndex => (prevIndex + 1) % images.length)
-        }, 5000)
+        }, 5000) 
 
         return () => clearInterval(imageChangeInterval)
     }, [images.length])
 
     return (
-        <div className='absolute'>
+        <div
+            className="relative p-8 bg-cover bg-center rounded-lg shadow-lg h-96 md:h-[500px]"  
+            style={{
+                backgroundImage: `url(${images[currentImageIndex]})`, 
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+            }}
+        >
+            <div className="absolute inset-0 bg-black opacity-40"></div>
             <div className="relative z-10">
-                <div className="absolute inset-0 bg-black opacity-40"></div>
-                <div className="relative z-10">
-                    <h2 className="text-2xl font-semibold mb-4 text-white">Get in Touch</h2>
-                    <p className="mb-4 text-white">Feel free to reach out if you have any questions or just want to chat!</p>
-                    <p className="mb-2 text-white"><strong>Email:</strong> obinyowinfridaa@gmail.com</p>
-                    <p className="mb-2 text-white"><strong>Location:</strong> Nairobi, Kenya</p>
-                    <p className="text-white"><strong>Current Visitors:</strong> {visitors}</p>
-                </div>
+                <h2 className="text-2xl font-semibold mb-4 text-white">Get in Touch</h2>
+                <p className="mb-4 text-white">Feel free to reach out if you have any questions or just want to chat!</p>
+                <p className="mb-2 text-white"><strong>Email:</strong> obinyowinfridaa@gmail.com</p>
+                <p className="mb-2 text-white"><strong>Location:</strong> Nairobi, Kenya</p>
+                <p className="text-white"><strong>Current Visitors:</strong> {visitors}</p>
             </div>
         </div>
     )
