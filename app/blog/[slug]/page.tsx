@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-types */
-
 'use client'
 import dynamic from 'next/dynamic'
 import { useParams } from 'next/navigation';
@@ -12,6 +10,7 @@ const BlogPostComponents: Record<BlogPostSlug, React.ComponentType<{}>> = {
   'integrating-notion-cms': dynamic(() => import('./../../../components/notion')),
 }
 
+// eslint-disable-next-line @typescript-eslint/ban-types
 export default function BlogPostPage() {
     const { slug } = useParams<{ slug: string }>(); 
   

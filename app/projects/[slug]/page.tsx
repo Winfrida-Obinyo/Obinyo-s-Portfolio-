@@ -14,6 +14,7 @@ const ProjectPostComponents: Record<ProjectPostSlug, React.ComponentType<{}>> = 
   'gerar-lists': dynamic(() => import('./../../../components/gerar')),
 }
 
+// eslint-disable-next-line @typescript-eslint/ban-types
 export default function ProjectPostPage() {
     const params = useParams(); 
     const slug = params?.slug;
