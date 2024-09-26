@@ -55,7 +55,7 @@ export default function PrivacyPolicy() {
         5. Your Rights
       </h2>
       <p className="text-lg text-gray-700 mb-6">
-        You can request to access, update, or delete your personal information anytime by reaching out to me at <span className="font-semibold">[obinyowinfridaa@gmail.com]</span>.
+        You can request to access, update, or delete your personal information anytime by reaching out to me at <span className="font-semibold">obinyowinfridaa@gmail.com</span>.
       </p>
 
       <h2 className="text-3xl font-semibold mt-10 mb-4 text-green-600"> 
@@ -69,14 +69,14 @@ export default function PrivacyPolicy() {
         7. Changes to this Policy
       </h2>
       <p className="text-lg text-gray-700 mb-6">
-        I may occasionally update this Privacy Policy. Any changes will be posted here, so check back if you're interested.
+        I may occasionally update this Privacy Policy. Any changes will be posted here, so check back if you&apos;re interested.
       </p>
 
       <h2 className="text-3xl font-semibold mt-10 mb-4 text-green-600"> 
         8. Contact Me
       </h2>
       <p className="text-lg text-gray-700 mb-6">
-        If you have any questions or concerns about how your information is handled, feel free to reach out to me at <span className="font-semibold">[obinyowinfridaa@gmail.com]</span>.
+        If you have any questions or concerns about how your information is handled, feel free to reach out to me at <span className="font-semibold">obinyowinfridaa@gmail.com</span>.
       </p>
 
       <p className="text-center text-gray-500 mt-12">

@@ -1,26 +1,34 @@
-import { format } from 'date-fns'
-import Link from 'next/link'
+// app/blog/[slug]/page.tsx
 
-const placeholderBlogs = [
+import { format } from 'date-fns';
+import Link from 'next/link';
+
+// Placeholder data
+const placeholderBlogs: {
+  title: string;
+  preview: string;
+  date: Date;
+  slug: string;
+}[] = [
   {
     title: 'Learning Next.js by Creating a Portfolio',
     preview: 'A detailed breakdown of my experience building a portfolio with Next.js and the exciting learning moments along the way.',
     date: new Date(),
-    slug: 'learning-nextjs-portfolio',  
+    slug: 'learning-nextjs-portfolio',
   },
   {
     title: 'Understanding Server-Side Rendering in Next.js',
     preview: 'An introduction to SSR and its benefits in building highly performant web applications with Next.js.',
     date: new Date('2024-09-15'),
-    slug: 'understanding-ssr-nextjs',  
+    slug: 'understanding-ssr-nextjs',
   },
   {
     title: 'Integrating Notion as a CMS for Your Blog',
     preview: 'Learn how to seamlessly integrate Notion with your Next.js blog as a headless CMS for content management.',
     date: new Date('2024-08-30'),
-    slug: 'integrating-notion-cms',  
+    slug: 'integrating-notion-cms',
   },
-]
+];
 
 export default function Blog() {
   return (
@@ -42,5 +50,5 @@ export default function Blog() {
         ))}
       </div>
     </div>
-  )
+  );
 }

@@ -29,7 +29,7 @@ export default function UnderstandingSSRNextJs() {
       
       <div className="border border-gray-300 rounded-lg p-4 mb-6">
         <p>
-          SSR allows pages to be rendered on the server on each request, rather than on the client’s browser. This means 
+          SSR allows pages to be rendered on the server on each request, rather than on the client&#39;s browser. This means 
           that when a user visits a page, they get the fully-rendered HTML instead of waiting for JavaScript to execute 
           on their browser.
         </p>
@@ -39,7 +39,7 @@ export default function UnderstandingSSRNextJs() {
       
       <div className="border border-gray-300 rounded-lg p-4 mb-6">
         <ul className="list-disc list-inside space-y-2">
-          <li><strong>Improved SEO:</strong> Search engines can easily index server-rendered HTML, improving a site's search rankings.</li>
+          <li><strong>Improved SEO:</strong> Search engines can easily index server-rendered HTML, improving a site&#39;s search rankings.</li>
           <li><strong>Faster Time to Interactive:</strong> Users can see the content sooner, improving their experience.</li>
           <li><strong>Dynamic Data:</strong> SSR is great for pages with frequently changing data, as they are updated on each request.</li>
         </ul>
