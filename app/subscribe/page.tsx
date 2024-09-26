@@ -1,3 +1,4 @@
+// pages/newsletter/page.tsx
 'use client'
 
 import { useState } from 'react'
@@ -10,19 +11,21 @@ export default function Newsletter() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm()
   const [loading, setLoading] = useState(false)
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: { email: any }) => {
     setLoading(true)
 
-    const res = await fetch('/api/subscribe', {
+    // Send email to the API route
+    const res = await fetch('/api/subscriber', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email: data.email })
+      body: JSON.stringify({ email: data.email }), // Pass email data to API route
     })
 
     const result = await res.json()
 
+    // Handle the response from the API
     if (result.error) {
       toast.error(result.error, {
         position: 'top-right',
@@ -33,7 +36,7 @@ export default function Newsletter() {
         position: 'top-right',
         autoClose: 3000,
       })
-      reset() 
+      reset() // Reset form on successful submission
     }
     setLoading(false)
   }
@@ -55,8 +58,8 @@ export default function Newsletter() {
                 required: 'Email is required',
                 pattern: {
                   value: /^\S+@\S+$/i,
-                  message: 'Invalid email address'
-                }
+                  message: 'Invalid email address',
+                },
               })}
               className="w-full p-3 border rounded-lg"
             />

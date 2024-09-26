@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-types */
+
 'use client'
 import dynamic from 'next/dynamic'
 import { useParams } from 'next/navigation';
