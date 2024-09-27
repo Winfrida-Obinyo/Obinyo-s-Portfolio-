@@ -1,6 +1,7 @@
 {
   "extends": ["next/core-web-vitals", "next/typescript"],
   "rules": {
-    "@typescript-eslint/ban-types": "off"  // Disable the ban-types rule
+    "@typescript-eslint/ban-types": "off",  // Disable the ban-types rule
+    "@typescript-eslint/no-empty-interface": "off"
   }
 }
