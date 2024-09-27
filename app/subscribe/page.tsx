@@ -1,4 +1,3 @@
-// pages/newsletter/page.tsx
 'use client'
 
 import { useState } from 'react'
@@ -7,11 +6,17 @@ import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Link from 'next/link'
 
+// Define the form data interface
+interface NewsletterFormData {
+  email: string;
+}
+
 export default function Newsletter() {
-  const { register, handleSubmit, formState: { errors }, reset } = useForm()
+  // Use the defined interface for form data
+  const { register, handleSubmit, formState: { errors }, reset } = useForm<NewsletterFormData>()
   const [loading, setLoading] = useState(false)
 
-  const onSubmit = async (data: { email: any }) => {
+  const onSubmit = async (data: NewsletterFormData) => {  // Specify type for the form data
     setLoading(true)
 
     // Send email to the API route
@@ -75,7 +80,7 @@ export default function Newsletter() {
           </button>
 
           <p className="mt-4 text-sm text-gray-600 text-center">
-            By submitting this form. I agree to the <Link href="/privacyPolicy" className="text-[#748A46] underline">privacy policy</Link>.
+            By submitting this form, I agree to the <Link href="/privacyPolicy" className="text-[#748A46] underline">privacy policy</Link>.
           </p>
         </form>
       </div>
