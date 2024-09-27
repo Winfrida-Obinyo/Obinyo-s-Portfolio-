@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import Image from 'next/image';
 
 function ProjectLayout({ title, imageUrl, children }: { title: string, imageUrl?: string, children: React.ReactNode }) {
   return (
@@ -11,7 +12,7 @@ function ProjectLayout({ title, imageUrl, children }: { title: string, imageUrl?
 
       {imageUrl && (
         <div className="mb-6">
-          <img
+          <Image
             src={imageUrl}
             alt={title}
             className="w-full max-w-xl max-h-96 object-cover mx-auto rounded-lg shadow-md"

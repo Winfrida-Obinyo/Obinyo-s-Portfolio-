@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faInternetExplorer } from '@fortawesome/free-brands-svg-icons';
+import Image from 'next/image';
 
 function ProjectLayout({ title, imageUrl, children }: { title: string, imageUrl?: string, children: React.ReactNode }) {
   return (
@@ -11,7 +12,7 @@ function ProjectLayout({ title, imageUrl, children }: { title: string, imageUrl?
 
       {imageUrl && (
         <div className="mb-6">
-          <img
+          <Image
             src={imageUrl}
             alt={title}
             className="w-full max-w-xl max-h-96 object-cover mx-auto rounded-lg shadow-md"
@@ -27,11 +28,11 @@ function ProjectLayout({ title, imageUrl, children }: { title: string, imageUrl?
 export default function AnimationMovies() {
   return (
     <ProjectLayout title="Animation Movies Platform" imageUrl="/images/animation.jpg">
-      <p className="text-lg leading-relaxed mb-4">➜ This platform is dedicated to showcasing animated films, providing a comprehensive and ever-growing database of animated movies from around the world. Whether you're a fan of classic animations or the latest releases, this platform caters to all tastes in animation.</p>
+      <p className="text-lg leading-relaxed mb-4">➜ This platform is dedicated to showcasing animated films, providing a comprehensive and ever-growing database of animated movies from around the world. Whether you&apos;re a fan of classic animations or the latest releases, this platform caters to all tastes in animation.</p>
 
       <p className="text-lg leading-relaxed mb-4">➜ The platform includes a robust search functionality that allows users to find movies based on title, genre, release year, or even animation studio. You can filter results by ratings, date, or alphabetically to narrow down your choices. This helps users quickly discover films they are interested in.</p>
 
-      <p className="text-lg leading-relaxed mb-4">➜ Each movie entry contains detailed information including the cast, directors, producers, animation studio, and runtime. There’s also a section for user ratings and reviews, where movie lovers can share their thoughts and rate the films they’ve watched. This community-driven feature helps build a solid recommendation system based on user interactions.</p>
+      <p className="text-lg leading-relaxed mb-4">➜ Each movie entry contains detailed information including the cast, directors, producers, animation studio, and runtime. There&apos;s also a section for user ratings and reviews, where movie lovers can share their thoughts and rate the films they’ve watched. This community-driven feature helps build a solid recommendation system based on user interactions.</p>
 
       <p className="text-lg leading-relaxed mb-4">➜ The platform also supports user authentication, allowing users to create personal accounts. Once logged in, users can add movies to their watchlist, rate movies, and leave reviews. The authentication system is secured using JSON Web Tokens (JWT), ensuring a safe and secure experience for all users.</p>
 
