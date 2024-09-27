@@ -19,8 +19,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         data: { email },
       });
       return res.status(201).json(subscriber);
-      // eslint-disable-next-line @typescript-eslint/ban-types
     } catch (error) {
+      // Log the error for debugging (optional)
+      console.error(error);
       return res.status(500).json({ error: 'Error subscribing, please try again' });
     }
   } else {
